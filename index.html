@@ -1,86 +1,105 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INF.03-07-25.06-SG</title>
-    <style>
-        body {
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            height: 800px;
-            width: 800px;
-        }
+<meta charset="UTF-8">
+<title>INF.03-05-25.06-SG</title>
 
-        header, footer, aside, section {
-            border: 2px solid black;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+<style>
 
-        header {
-            height: 80px;
-        }
 
-        main {
-            border: 2px solid black;
-            flex: 1;
-            display: flex;
-            position: relative;
-            padding: 50px;
-        }
+    .container {
+        width: 600px;
+        height: 800px;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+    }
 
-        p{
-            position: absolute;
-            top: 10px;
-            left: 10px;
-        }
+    header, footer, section {
+        border: 1px solid black;
+        display: flex;
 
-        aside {
-            flex: 1;
-            height: 100%;
-            border: 1px solid black; 
-        }
+    }
 
-        section {
-            flex: 1;
-            height: 100%;
-            border: 1px solid black;
-        }
+    header { height: 80px; }
+    .images-section { height: 120px; }
+    footer { height: 80px; }
 
-        footer {
-            height: 80px;
-        }
-    </style>
+    main {
+        flex: 1;
+        padding: 10px;;
+    }
+
+    .main-wrapper {
+        border: 1px solid black;
+        height: 95%;
+        display: flex;
+    }
+
+    .inner-row {
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+    aside {
+        border: 1px solid black;
+        width: 35%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav {
+        border: 1px solid black;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-top,
+    .nav-bottom {
+        border: 1px solid black;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
 </head>
 <body>
 
-    <header>
-        Blok nawigacyjny
-    </header>
+<section class="container">
+
+    <header>Blok nagłówkowy</header>
+
+    <section class="images-section">Blok sekcji obrazów</section>
 
     <main>
-        <p>Blok główny</p>
-        
-        <aside>
-            Blok boczny
-        </aside>
+        Blok główny
+        <section class="main-wrapper">
+            
+            <section class="inner-row">
+                <aside>Blok sekcji lewej</aside>
 
-        <section>
-            Sekcja
+                <nav>
+                    <section class="nav-top">Blok nawigacyjny</section>
+                    <section class="nav-bottom">Blok sekcji prawej</section>
+                </nav>
+            </section>
+
         </section>
     </main>
 
-    <footer>
-        Blok stopki
-    </footer>
+    <footer>Blok stopki</footer>
+
+</section>
     <div>
         <br><br>
         Wzór:
         <br>
-        <img src="07.png">
+        <img src="05.png">
     </div>
 
 </body>
